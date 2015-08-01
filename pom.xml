@@ -10,4 +10,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <description>Notepad++ User Defined Language Theme Switcher</description>
+    <name>User Defined Language Theme Switcher</name>
 </project>
