@@ -1,0 +1,33 @@
+
+plugins {
+	id 'java'
+	id 'application'
+}
+
+group = 'lt.realmdev.nppudlthemeswitcher'
+version = '1.0.1'
+description = 'Notepad++ User Defined Language Theme Switcher'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+mainClassName = 'lt.realmdev.nppudlthemeswitcher.NppUDLThemeSwitcher'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+}
+
+task buildWithDeps(type: Jar) {
+	manifest {
+		attributes 'Main-Class': mainClassName
+	}
+	classifier = 'jar-with-dependencies'
+	from { sourceSets.main.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+	with jar
+}
