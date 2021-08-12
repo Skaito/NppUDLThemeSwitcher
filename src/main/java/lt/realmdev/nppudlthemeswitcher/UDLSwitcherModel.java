@@ -15,10 +15,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-/**
- *
- * @author Marius Tomas <marius@realmdev.lt>
- */
 public class UDLSwitcherModel implements ComboBoxModel<UDLItem> {
 	
 	private final ArrayList<UDLItem> items;

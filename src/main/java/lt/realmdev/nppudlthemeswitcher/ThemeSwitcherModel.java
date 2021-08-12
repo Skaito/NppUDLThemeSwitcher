@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import javax.swing.ComboBoxModel;
 import javax.swing.event.ListDataListener;
 
-/**
- *
- * @author Marius Tomas <marius@realmdev.lt>
- */
 public class ThemeSwitcherModel implements ComboBoxModel<ThemeItem> {
 
 	private final ArrayList<ThemeItem> items;
@@ -21,11 +17,11 @@ public class ThemeSwitcherModel implements ComboBoxModel<ThemeItem> {
 		item = null;
 		listeners = new ArrayList<>();
 		if (themesPath != null && themesPath.isDirectory()) {
-			ThemeItem citem;
+			ThemeItem cItem;
 			for (File file : themesPath.listFiles((File dir, String name) -> name.endsWith(".xml"))) {
 				String[] name = file.getName().split("\\.");
-				items.add(citem = new ThemeItem(file, name[0]));
-				if (stylerTheme != null && citem.getPath().equals(stylerTheme)) item = citem;
+				items.add(cItem = new ThemeItem(file, name[0]));
+				if (stylerTheme != null && cItem.getPath().equals(stylerTheme)) item = cItem;
 			}
 			if (items.size() > 0 && item == null) item = items.get(0);
 		}

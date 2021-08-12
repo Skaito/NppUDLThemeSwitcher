@@ -1,10 +1,6 @@
 
 package lt.realmdev.nppudlthemeswitcher;
 
-/**
- *
- * @author Marius Tomas <marius@realmdev.lt>
- */
 public class ThemeStyle {
 	
 	private int id;

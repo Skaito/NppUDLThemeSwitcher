@@ -16,10 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-/**
- *
- * @author Marius Tomas <marius@realmdev.lt>
- */
+// spell-checker: ignore appdata
+
 public class NppUDLThemeSwitcher {
 	
 	private final JFrame mainFrame;

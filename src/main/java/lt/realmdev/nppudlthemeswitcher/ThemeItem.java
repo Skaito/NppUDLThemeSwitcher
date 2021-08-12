@@ -15,10 +15,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-/**
- *
- * @author Marius Tomas <marius@realmdev.lt>
- */
 public class ThemeItem {
 	
 	public static final String STYLE_PREPROCESSOR = "PREPROCESSOR";
