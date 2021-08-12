@@ -47,7 +47,10 @@ public class NppUDLThemeSwitcher {
 		NPPConfig config = new NPPConfig(new File(configPath, "config.xml"));
 		
 		udlChooserLabel = new JLabel("User Defined Language");
-		udlChooser = new JComboBox<>(new UDLSwitcherModel(new File(configPath, "userDefineLang.xml")));
+		udlChooser = new JComboBox<>(new UDLSwitcherModel(new File[] {
+			new File(configPath, "userDefineLang.xml"),
+			new File(configPath, "userDefineLangs")
+		}));
 		
 		themeChooserLabel = new JLabel("Theme");
 		themeChooser = new JComboBox<>(new ThemeSwitcherModel(new File(configPath, "themes"), config.getStylerTheme()));
